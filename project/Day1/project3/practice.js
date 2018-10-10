@@ -42,7 +42,7 @@ console.log("I'm Learning Javascript");
 // console.log(count);
 
 
-// var age = prompt("enter your age in years");
+// var age = 26;
 // var dog = age/7;
 // console.log(dog);
 
@@ -53,17 +53,21 @@ console.log("I'm Learning Javascript");
 // console.log(percent);
 
 
-// var city = "Dharamshala";
-// var country = "India";
-// alert(city + ", " + country);
-
-
-
-var num1 = 20;
-var num2 = 20;
-function sum(){
-  return num1+num2;
+var city = "Dharamshala";
+var country = "India";
+function message(a, b){
+  alert(a + ", " + b);
 }
-alert(
-  num1+num2
-)
+message(city, country);
+
+
+
+
+// var num1 = 20;
+// var num2 = 20;
+// function sum(){
+//   return num1+num2;
+// }
+// alert(
+//   num1+num2
+// )
