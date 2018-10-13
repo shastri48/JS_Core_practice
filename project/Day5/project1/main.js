@@ -8,7 +8,7 @@ console.log(color[0]);
 console.log(color[2]);
 
 //4.Write one line of code that changes the value of the last color in the list to "ultraviolet" (overwriting the previous value).
-color[color.length-1] = "ultraviolet";
+color[color.length - 1] = "ultraviolet";
 
 //5. Create a new variable called fourthColor and set it equal to the fourth color in the list.
 var fourthcolor = color[3];
@@ -37,5 +37,5 @@ for (var i = 0; i < color.length; i++){
 }
 
 //12.Create a variable named lastColor that will always point to the last element of the colors array, no matter how many colors are in the list. (Hint: make use of the array's length property for this!)
-var lastColor = color[color.length-1];
+var lastColor = color[color.length - 1];
 

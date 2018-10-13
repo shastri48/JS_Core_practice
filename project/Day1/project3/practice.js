@@ -21,7 +21,7 @@ console.log("I'm Learning Javascript");
 
 
 // var name = prompt("Write your name");
-//   if(name=="bob"||name=="alice"){
+//   if(name =="bob" || name == "alice") {
 //   function greeting() {
 //     alert("welcome " + name);
 //   }
@@ -33,7 +33,7 @@ console.log("I'm Learning Javascript");
 
 
 // var name = prompt("enter your name");
-// console.log("Hello "+name+", How are you doing?");
+// console.log("Hello" + name + ", How are you doing?");
 
 
 
@@ -49,7 +49,7 @@ console.log("I'm Learning Javascript");
 
 // var studentScore = 41;
 // var maxScore = 100;
-// var percent = studentScore/maxScore*100;
+// var percent = studentScore / maxScore * 100;
 // console.log(percent);
 
 
@@ -65,9 +65,9 @@ message(city, country);
 
 // var num1 = 20;
 // var num2 = 20;
-// function sum(){
-//   return num1+num2;
+// function sum() {
+//   return num1 + num2;
 // }
 // alert(
-//   num1+num2
+//   num1 + num2
 // )

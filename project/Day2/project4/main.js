@@ -3,9 +3,9 @@
 
 // var password = prompt("enter password");
 // var conf_password = prompt("confirm password");
-// if(password==conf_password){
+// if (password == conf_password) {
 //   alert("Password Validated");
-// } else{
+// } else {
 //   alert("Password do not match");
 // }
 
@@ -46,7 +46,7 @@
 
 // Output of this alert( alert(1) || 2 || alert(3) );
 
-// alert(alert(1) || 2 || alert(3));
+// alert( alert(1) || 2 || alert(3) );
 
 
 
@@ -54,9 +54,9 @@
 // var num1 = prompt("enter first number");
 // var num2 = prompt("enter second number");
 // function calculation(a, b){
-//   var sum = a+b;
-//   console.log("sum = "+ sum);
-//   console.log("sub = ", (a - b));
+//   var sum = a + b;
+//   console.log("sum =" + sum);
+//   console.log( "sub = " + (a - b) );
 //   console.log("mul = " + a * b);
 //   console.log("div = " + a / b);
 // }
@@ -70,8 +70,8 @@
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
 // var sum = 0;
-// for(i = 0; i < 1000; i++){
-//   if(i%3==0 || i%5==0){
+// for (i = 0; i < 1000; i++) {
+//   if (i % 3 == 0 || i % 5 == 0) {
 //     sum = sum + i;
 //   }
 // }
@@ -83,8 +83,8 @@
 // Function to display a number if user enters negative number
 
 // var num1 = prompt("Enter number here");
-// function display(a){
-//   if(a<0){
+// function display(a) {
+//   if (a < 0) {
 //     console.log(a);
 //   }
 // }
@@ -94,10 +94,10 @@
 // Funnction to check whether an integer entered by the user is odd or even
 
 // var num1 = prompt("Enter number here");
-// function check(a){
-//   if(a%2==0){
+// function check(a) {
+//   if (a % 2 == 0) {
 //     console.log("given number is even")
-//   } else{
+//   } else {
 //     console.log("given number is odd");
 //   }
 // }
@@ -115,10 +115,10 @@
 
 // Funnction to Check Whether a Character is Vowel or Consonant
 // var char = prompt("Entere a character");
-// function check(char){
-//   if(char=="a"||char=="A"||char=="e"||char=="E"||char=="i"||char=="I"||char=="o"||char=="O"||char=="u"||char=="U"){
+// function check(char) {
+//   if (char == "a" || char == "A" || char == "e" || char == "E" || char == "i" || char == "I" || char == "o" || char == "0" || char == "u" || char == "U") {
 //     console.log("entered character is vowel");
-//   }else{
+//   } else {
 //     console.log("entered character is consonant");
 //   }
 // }
@@ -130,12 +130,12 @@
 
 
 // var big = num1;
-// function largest(a, b, c){
+// function largest(a, b, c) {
 //   big = a;
-//   if(a<b){
+//   if (a < b) {
 //     big = b;
 //   }
-//   if(big<c){
+//   if (big < c) {
 //       big = c;
 //   }
 // }
@@ -152,9 +152,9 @@
 
 
 // Funnction to generate Multiplication Table of a given number (use alert for number input)
-// var num1 = Number(prompt("Enter number"));
-// function table(a){
-//   for(var i = 1; i<=10; i++){
+// var num1 = Number( prompt("Enter number") );
+// function table(a) {
+//   for (var i = 1; i <= 10; i++) {
 //     console.log(a * i);
 //   }
 // }
@@ -163,10 +163,10 @@
 
 
 
-// var num1 = Number(prompt("Enter number"));
+// var num1 = Number( prompt("Enter number") );
 // sum = 0;
-// function factorial(a){
-//   for(var i = 1; i <= a; i++){
+// function factorial(a) {
+//   for (var i = 1; i <= a; i++) {
 //     sum = sum + i;
 //   }
 // }
@@ -175,13 +175,15 @@
 
 
 
-// Output: var x = 10 + "1"; console.log(x); typeof x;
+// Output: var x = 10 + "1"; 
+// console.log(x); 
+// typeof x;
 // var x = 10 + "1";
 // console.log(x);
 // typeof(x);
 
 
-// console.log(225/6);
+// console.log(225 / 6);
 
 
 
@@ -195,10 +197,10 @@
 //   var temp = y;
 //   y = x + y;
 //   x = temp; 
-//   if(y%2==0){
+//   if (y % 2 == 0) {
 //     sum = sum + y;
 //   }
-// }while(y<4000000);
+// }while (y < 4000000);
 
 
 
@@ -215,22 +217,22 @@
 // - FF if marks is less than or equal to 30
 
 
-// var marks = Number(prompt("Enter number"));
-// if(marks>90){
+// var marks = Number( prompt("Enter number") );
+// if (marks > 90) {
 //   console.log("AA")
-// }else if(marks<=90 && marks>80){
+// } else if (marks <= 90 && marks > 80) {
 //   console.log("AB");
-// }else if(marks<=80 && marks>70){
+// } else if (marks <= 80 && marks > 70) {
 //   console.log("BB");
-// }else if(marks<=70 && marks>60){
+// } else if (marks <= 70 && marks > 60) {
 //   console.log("BC");
-// }else if(marks<=60 && marks>50){
+// } else if (marks <= 60 && marks > 50) { 
 //   console.log("CC");
-// }else if(marks<=50 && marks>40){
+// } else if (marks <= 50 && marks > 40) {
 //   console.log("CD");
-// }else if(marks<=40 && marks>30){
+// } else if (marks <= 40 && marks > 30) {
 //   console.log("DD");
-// }else if(marks<=30){
+// } else if (marks <= 30) {
 //   console.log("FF");
 // }
 
@@ -253,7 +255,7 @@
 // - NINE, if num is equal to .
 // - PLEASE TRY AGAIN, if  is none of the above.
 
-// switch( prompt("enter a number") ){
+// switch ( prompt("enter a number") ) {
 //   case "1":
 //     console.log("ONE");
 //     break;

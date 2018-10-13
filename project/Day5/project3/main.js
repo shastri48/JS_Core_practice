@@ -51,11 +51,11 @@
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
     const wes = {
-      name : "wes",
-      age : 100,
-      social : {
-        twitter : "shastri48",
-        facebook : "abhishek.naaz"
+      name: "wes",
+      age: 100,
+      social: {
+        twitter: "shastri48",
+        facebook: "abhishek.naaz"
       }
     };
     console.clear();

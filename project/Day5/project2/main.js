@@ -1,9 +1,9 @@
 //1. Pick a penguin from Wikipedia's List of Fictional Penguins (https://en.wikipedia.org/wiki/List_of_fictional_penguins) and create an object named myPenguin with properties that represent the information listed in each column on that Wikipedia page (for example: the character's name, origin, and author).
 var myPenguin = {
-  "character nam" : "Parker",
-  origin : "Love birds",
-  author : "Robert J. Sherman",
-  notes : "leader",
+  "character nam": "Parker",
+  origin: "Love birds",
+  author: "Robert J. Sherman",
+  notes: "leader"
 }
 
 
@@ -15,7 +15,7 @@ console.log(`Hello, I'm a penguin and my name is ${myPenguin["character nam"]}`)
 myPenguin.canFly = false;
 
 //4. Add a method to your penguin called chirp that prints to the console: "CHIRP CHIRP! Is this what penguins sound like?"
-myPenguin.chirp = function(){
+myPenguin.chirp = function() {
   console.log("CHIRP CHIRP!");
 }
 
@@ -36,10 +36,10 @@ myPenguin.sayHello();
 
 
 //8. Write another method called fly, and inside that method, use an if / else statement to print "I can fly!" to the console if your penguin's canFly property is true, or "No flying for me!" if its canFly property is false.
-myPenguin.fly = function (){
-  if(this.canFly == true){
+myPenguin.fly = function () {
+  if (this.canFly == true) {
     console.log("I can fly");
-  }else {
+  } else {
     console.log("No flying for me!");
   }
 }
@@ -58,12 +58,12 @@ myPenguin.fly();
 
 
 //12. Write a for ... in loop to print each key to the console. (Hint: See this page for an example of this special type of loop.)
-// for (var x in myPenguin){
+// for (var x in myPenguin) {
 //   console.log(x);
 // }
 
 //13. Write another for ... in loop to print the value of each key to the console. (Hint: You'll need to use bracket notation to access the values this way, instead of dot notation!)
-// for (var x in myPenguin){
+// for (var x in myPenguin) {
 //   console.log(myPenguin[x]);
 // }
 
@@ -95,7 +95,7 @@ myPenguin.favouriteFoods[myPenguin.favouriteFoods.length - 1] = "pineapples";
 var lastFavFood = myPenguin.favouriteFoods[myPenguin.favouriteFoods.length - 1];
 
 //8. Write a for loop to iterate through every food in your penguin's favoriteFood property and print each one to the console. (Hint: This loop will look exactly the same as the one you wrote for step 16 above, except now you're accessing the array as a property of an object.)
-// for (var x in myPenguin){
+// for (var x in myPenguin) {
 //   console.log(x);
 // }
 
@@ -104,10 +104,10 @@ var lastFavFood = myPenguin.favouriteFoods[myPenguin.favouriteFoods.length - 1];
 
 // 1. Add a new property to your penguin called outfit and set it equal to another object with the following properties: hat, shirt, pants, and shoes -- each property should have a string as its value! (I suggest you give it a baseball cap, Hawaiian shirt, cargo shorts, and flip-flops, because wouldn't that be ridiculous?)
 myPenguin.outfit = {
-  hat : "baseball cap",
-  shirt : "Hawaiian shirt",
-  pants : "cargo shorts",
-  shoes : "flip-flops",
+  hat: "baseball cap",
+  shirt: "Hawaiian shirt",
+  pants: "cargo shorts",
+  shoes: "flip-flops",
 }
 
 // 2. Create a new variable called penguinHatType and set it equal to the value of the hat in your penguin's outfit! Then print your new variable to the console.
@@ -120,10 +120,10 @@ myPenguin.outfit.accessory = "pocket watch";
 myPenguin.outfit.hat = "top hat";
 
 // 5. This penguin is a freelancer who always works from home, so it doesn't actually need to wear any pants! Let's delete the pants property from this penguin's outfit property. (Hint: see this page on the delete operator for examples.)
-delete myPenguin.outfit.pants
+delete myPenguin.outfit.pants;
 
 // 6. Write a for ... in loop to print the value of each piece of clothing in your penguin's outfit so you can see a list of clothing items in the console. (Hint: This is the same as step 31 from above, only now we're accessing values from a nested object!)
-for (var x in myPenguin.outfit){
+for (var x in myPenguin.outfit) {
   console.log(myPenguin.outfit[x]);
 }
 
@@ -167,7 +167,7 @@ console.log(penguins[0]);
 console.log(penguins[1]);
 
 // 4 Print to the console the name of the last penguin in the list.
-console.log(penguins[penguins.length-1])
+console.log(penguins[penguins.length - 1])
 
 // 5. Remember the penguin you created earlier, with the variable name of myPenguin? Add that penguin to the end of the penguins array!
 penguins.push(myPenguin);
@@ -184,24 +184,24 @@ penguins[0].sayHello();
 
 
 // 9.Write a for loop to iterate through every penguin in the array and print the value of each penguin's name property to the console.
-// for (var i = 0; i < penguins.length; i++){
+// for (var i = 0; i < penguins.length; i++) {
 //   console.log(penguins[i].name);
 // }
 // 10.Write a for loop to call the sayHello method of every penguin in the array!
-// for( var i = 0; i < penguins.length;i++){
-//   console.log(penguins[i].sayHello());
+// for(var i = 0; i < penguins.length;i++) {
+//   console.log( penguins[i].sayHello() );
 // }
 
 // 11.Write a for loop to iterate through every penguin in the array, and add a new property to each penguin called numberOfFeet with the value 2
-for (var i = 0;i < penguins.length;i++){
+for (var i = 0; i < penguins.length; i++) {
   penguins[i].numberOfFeet = 2;
 }
 
 
 
 // 12.Write another for loop to iterate through every penguin in the array, and for each penguin that can fly, print to the console a message containing the penguin's name and " can fly!" -- for example, "Gunter can fly!" or "Ramón can fly!" (Don't do anything for the penguins that cannot fly.)
-for (var i = 0;i < penguins.length;i++){
-  if(penguins[i].canFly == true){
+for (var i = 0; i < penguins.length; i++) {
+  if (penguins[i].canFly == true) {
     console.log(`${penguins[i].name } can fly`);
   }
 }
