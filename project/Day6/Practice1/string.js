@@ -185,7 +185,7 @@ function humanizedNum(number) {
     for(var i = 0; i < array.length; i+=n) {
       for(var k = i; k < i+n; k++){
       newStr.push(array[k]);
-    }
+      }
     newStr2.push(newStr.join(""));
     newStr = [];
     }
