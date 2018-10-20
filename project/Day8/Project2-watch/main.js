@@ -1,6 +1,7 @@
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
+const borderColor = document.querySelector('.watch');
 function setDate() {
   const now = new Date();
   const second = now.getSeconds();
@@ -12,7 +13,7 @@ function setDate() {
   secondHand.style.transform = `rotate(${secondDegree}deg)`;
   minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
   hourHand.style.transform = `rotate(${hourDegree}deg)`;
+  borderColor.style.background = `#${secondDegree}`;
 }
 setInterval(setDate, 1000);
-const borderColor = document.querySelector('.watch');
-borderColor.style.background = `#${secondHand}`;
+
