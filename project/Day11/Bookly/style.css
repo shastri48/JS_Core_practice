@@ -66,9 +66,12 @@ h1, h2{
 .delete{
     float: right;
     background: #e91e63;
-    padding: 6px;
-    border-radius: 4px;
     cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0 4px 4px 0;
+    width: 100px;
+    border-left: 0;
     color: white;
 }
 
@@ -109,6 +112,8 @@ h1, h2{
     border-left: 0;
     color: white;
 }
+
+
 
 #add-book:after{
     content: '';
