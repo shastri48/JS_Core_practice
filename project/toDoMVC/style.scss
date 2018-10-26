@@ -1,0 +1,53 @@
+.container {
+  max-width: 1100px;
+  width: 100%;
+  padding-top: 30px;
+  margin: 0 auto;
+  // text-align: center;
+}
+h1 {
+  font-size: 90px;
+  margin: 0;
+  color: rgb(238, 108, 108);
+  text-align: center;
+}
+#todo-form {
+  margin: 0 auto;
+  text-align: center;
+  input {
+    border: none;
+    box-shadow: 3px 2px 10px black;
+    padding: 5px 30px;
+    height: 40px;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+#book-list {
+  ul{
+    list-style-type: none;
+    li {
+      width: 300px;
+      justify-items: center;
+      font-size: 30px;
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      margin: 0 auto;
+      &:hover {
+        box-shadow: 0px 0px 3px rgb(83, 81, 81);
+      }
+      button{
+        font-size: 30px;
+        background: none;
+        border:none;
+      }
+      .edit {
+        font-size: 20px;
+        color: blue;
+      }
+    }
+  }
+}
+.fetch {
+  text-align: center;
+}

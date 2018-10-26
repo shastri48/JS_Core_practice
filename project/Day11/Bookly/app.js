@@ -7,7 +7,7 @@ var searchBooks = document.querySelector("#search-books [type=text]");
 var books = JSON.parse(localStorage.getItem('bookData')) || [];
 
 
-function displayBook(data) {
+function displayBook(data = []) {
   bookList.innerHTML = "";
   data.forEach((value, index) => {
     bookList.innerHTML += `<li> ${value} 
@@ -39,7 +39,6 @@ function hideAll(e) {
 }
 function search(e) {
   let searchText = e.target.value.toLowerCase();
-  // console.log(searchText);
   var newArray = books.filter(v => v.toLowerCase().includes(searchText));
   displayBook(newArray);
 

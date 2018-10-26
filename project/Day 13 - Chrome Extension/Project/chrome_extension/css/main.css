@@ -1,0 +1,48 @@
+.container{
+  background: url("../img/chrome.JPG");
+  background-repeat: no-repeat;
+  background-origin:center;
+  background-size: cover; 
+  width:100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+}
+.time{
+  text-align: center;
+}
+.hour, .minute, .second {
+  display: inline-block;
+  font-size: 80px;
+  color: #7F0CE8;
+}
+p, span{
+  font-size: 40px;
+  color:#7F0CE8;
+}
+span {
+  color: yellow;
+  float: right;
+}
+.todo__header {
+  color: #7F0CE8;
+  font-size: 50px;
+}
+.todo {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  color: green;
+  width: 300px;
+  height: 30px;
+}
+button {
+  border: none;
+  padding: 15px 30px;
+}
+.fetch__count {
+  float: none;
+  color:red;
+}

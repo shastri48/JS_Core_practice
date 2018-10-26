@@ -1,0 +1,46 @@
+.container {
+  max-width: 1100px;
+  width: 100%;
+  padding-top: 30px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 90px;
+  margin: 0;
+  color: #ee6c6c;
+  text-align: center; }
+
+#todo-form {
+  margin: 0 auto;
+  text-align: center; }
+  #todo-form input {
+    border: none;
+    box-shadow: 3px 2px 10px black;
+    padding: 5px 30px;
+    height: 40px;
+    width: 300px;
+    margin: 0 auto; }
+
+#book-list ul {
+  list-style-type: none; }
+  #book-list ul li {
+    width: 300px;
+    justify-items: center;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    margin: 0 auto; }
+    #book-list ul li:hover {
+      box-shadow: 0px 0px 3px #535151; }
+    #book-list ul li button {
+      font-size: 30px;
+      background: none;
+      border: none; }
+    #book-list ul li .edit {
+      font-size: 20px;
+      color: blue; }
+
+.fetch {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
