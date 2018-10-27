@@ -14,7 +14,8 @@
       <div class="time">
         <h1 class="hour"></h1>
         <h1 class="minute"></h1>
-        <h1 class="second"></h1>
+        <div class="greeting"></div>
+        <div class="name"></div>
       </div>
       <div class="quote">
         <div class="quote-text">
@@ -26,19 +27,21 @@
       </div>  
     </div>
     <div class="todo__section">
-      <h1 class = "todo__header">todos</h1>
-      <form action="" id="todo-form">
-        <input type="text" class="todo" id = "todo-text" placeholder="Enter ToDo's">
-      </form>
-      <div id="book-list">
-        <ul>
-        </ul>
-      </div>
-      <div class="fetch">
-          <p>LEFT : <span data-id="left" class="fetch__count"> </span></p>
-        <button data-id="all">ALL</button>
-        <button data-id="done">DONE</button>
-        <button data-id="notDone">!DONE</button>
+      <div class="todoItems">
+        <h1 class = "todo__header">todos</h1>
+        <form action="" id="todo-form">
+          <input type="text" class="todo" id = "todo-text" placeholder="Enter ToDo's">
+        </form>
+        <div id="book-list">
+          <ul>
+          </ul>
+        </div>
+        <div class="fetch">
+            <p>LEFT : <span data-id="left" class="fetch__count"> </span></p>
+          <button data-id="all">ALL</button>
+          <button data-id="done">DONE</button>
+          <button data-id="notDone">!DONE</button>
+        </div>
       </div>
     </div>  
   </div>

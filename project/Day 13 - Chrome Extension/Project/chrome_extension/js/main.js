@@ -1,7 +1,7 @@
 const h = document.querySelector(".hour");
 const min = document.querySelector(".minute");
 const sec = document.querySelector(".second");
-
+var greeting = "";
 var now;
 var second;
 var minute;
@@ -12,11 +12,23 @@ function setDate() {
   minute = now.getMinutes();
   hour = now.getHours();
   h.innerText = `${hour}:`;
-  min.innerText = `${minute}:`;
-  sec.innerText = `${second}`;  
+  min.innerText = `${minute}`;
+  if(hour < 12) {
+    greeting = "Good Morning";
+  }
+  if(hour > 12 && hour < 17) {
+    greeting = "Good Afternoon";
+  }
+  if(hour > 17 && hour < 20) {
+    greeting = "Good Evening";
+  }
+  if(hour > 20) {
+    greeting = "Good Night";
+  }
+  wish.innerText = greeting;
+
 }
 setInterval(setDate, 1000);
-console.log(hour)
 
 
 
@@ -33,9 +45,7 @@ const showAll = document.querySelector("[data-id=all]");
 const doneAll = document.querySelector("[data-id=done]");
 const notDoneAll = document.querySelector("[data-id=notDone]");
 const left = document.querySelector("[data-id=left]");
-
-
-
+const wish = document.querySelector(".greeting");
 
 
 
@@ -45,7 +55,7 @@ var toDoArray = JSON.parse(localStorage.getItem("dataArray")) || [];
 function todoDisplay(data = []) {
   bookList.innerHTML = "";
   data.forEach((v, i) => {
-  bookList.innerHTML += `<li data-id = "${i}"><input type = "checkbox" class="check" data-id="${i}" ${v.done ? 'checked' : ""}>${v.name}<button class = "edit" data-id="${i}">Edit</button>
+  bookList.innerHTML += `<li data-id = "${i}"><input type = "checkbox" class="check" data-id="${i}" ${v.done ? 'checked' : ""}>${v.done ? v.name.strike(): v.name}<img class = "edit pencil" data-id="${i}" src="img/pencil.svg">
   <button class = "delete" data-id="${i}">X</button>
   </li>`
  
@@ -59,6 +69,7 @@ function addToDo(e) {
     name : "",
     done: false
   }
+  if(!todoValue.value) return;
   todoData.name = todoValue.value; 
   toDoArray.push(todoData);
   todoValue.value = "";
@@ -68,7 +79,7 @@ function addToDo(e) {
 }
 
 function todoDelete(event){
-  console.log("tododelete");
+  // console.log("tododelete");
 
 if(event.target.classList.contains("delete")) {
   index = event.target.dataset.id;
@@ -81,7 +92,7 @@ leftCount();
 
 
 function todoToggle(e){
-  console.log("todotoggle");
+  // console.log("todotoggle");
 
  if(!e.target.classList.contains("check")) return;
  let id = e.target.dataset.id;
@@ -121,12 +132,13 @@ function leftCount() {
   left.textContent = notDone.length
 }
 function todoEdit(event) {
-  console.log("todoedi");
+  // console.log(event,'edit');
   let id = event.target.dataset.id;
-  if(event.target.classList.contains("editText")) return;
+  // console.log(id,'asdasd')
+  // if(event.target.classList.contains("editText")) return;
  if(event.target.classList.contains("edit")){
    newText = `<input type="text" class="editText" id=${id} value= ${toDoArray[id].name}>`
-   toDoArray[id].name = newText;
+   toDoArray[id].name = newText;  
   todoDisplay(toDoArray);
   }
 }

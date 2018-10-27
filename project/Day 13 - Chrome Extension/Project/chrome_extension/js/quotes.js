@@ -416,6 +416,8 @@ var randomQuote;
 var randomAuthor;
 var quoteText = document.querySelector("p");
 var author = document.querySelector("span");
+var randomNumber = Math.floor(Math.random() * quotes.length);
+
 
 function randomQuotes(){
     randomNumber = Math.floor(Math.random() * quotes.length);
@@ -428,4 +430,5 @@ function generateQuote() {
     quoteText.textContent = randomQuote;
     author.innerHTML = `"<em>${randomAuthor}<em>"`;
 }
-setInterval(generateQuote, 5000)
+setInterval(generateQuote, 12000)
+generateQuote();

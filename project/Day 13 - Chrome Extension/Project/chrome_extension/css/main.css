@@ -1,5 +1,9 @@
 .container{
-  background: url("../img/chrome.JPG");
+  background: url("../img/chrome.JPG");  
+  min-height:100%;
+  background:url(../img/chrome.jpeg);
+  background-size:cover;
+  box-shadow:inset 0 0 0 2000px rgba(180, 161, 172, 0.3);
   background-repeat: no-repeat;
   background-origin:center;
   background-size: cover; 
@@ -9,40 +13,124 @@
   grid-template-columns: 2fr 1fr;
 
 }
+
+
+
+/* time handling */
 .time{
   text-align: center;
 }
 .hour, .minute, .second {
   display: inline-block;
-  font-size: 80px;
-  color: #7F0CE8;
+  font-size: 100px;
+  color: rgb(224, 221, 221);
+}
+
+
+/* todos */
+
+
+.todo__section {
 }
 p, span{
   font-size: 40px;
-  color:#7F0CE8;
+  color:rgb(224, 221, 221);
 }
 span {
-  color: yellow;
+  color: rgb(235, 235, 30);
   float: right;
 }
+
+
 .todo__header {
-  color: #7F0CE8;
+  margin-top: 0;
+  padding-top: 0; 
+  color: white;
   font-size: 50px;
 }
 .todo {
   background: transparent;
   border: none;
   border-bottom: 2px solid black;
+  /* width: 80%; */
   font-size: 20px;
-  color: green;
+  color: white;
   width: 300px;
   height: 30px;
 }
+.todoItems {
+  padding: 10px;
+  display: inline-block;
+  background: rgba(128, 128, 128, 0.3); 
+}
+
+#book-list ul {
+  margin-left: 0;
+  padding-left: 0; 
+}
+#book-list ul li {
+  margin-left: 0;
+  padding-left: 0;  
+  list-style-type: none;
+  display: grid;
+  width: 300px;
+  align-items: center;
+  font-size: 20px;
+  grid-gap: 10px;
+  color: white;
+  grid-template-columns: auto 1fr auto auto;
+}
+
+/* checkbox */
+.check {
+  background: none;
+  width: 20px;
+  height: 20px;
+}
+
+/* buttons */
 button {
+  background: rgb(136, 151, 136);
   border: none;
-  padding: 15px 30px;
+  width: 100px;
+  padding: 10px 30px;
+}
+button:hover {
+  background: rgb(107, 165, 107);
+}
+
+/* editing */
+.edit {
+  padding: 5px 0; 
+  width: auto;
+  background: none;
+  border: none;
+}
+.editText {
+  background: transparent;
+  width: 200px;
+}
+.pencil {
+  height : 20px;
+  filter:invert(100%);
+  width: 15px;
+}
+.delete {
+  width: auto;
+  padding: 5px 0;
+  background: none;
+  border: none;
+}
+
+
+
+/* fetching no of todos */
+.fetch p {
+  color: rgb(224, 221, 221);
+  font-size: 20px;
 }
 .fetch__count {
   float: none;
-  color:red;
+  color: rgb(224, 221, 221);
+  font-size: 20px;
 }
