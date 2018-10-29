@@ -25,7 +25,11 @@
   font-size: 100px;
   color: rgb(224, 221, 221);
 }
+.greeting {
+  font-size: 40px;
+  color: rgb(224, 221, 221);
 
+}
 
 /* todos */
 

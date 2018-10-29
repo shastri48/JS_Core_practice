@@ -46,6 +46,8 @@ const doneAll = document.querySelector("[data-id=done]");
 const notDoneAll = document.querySelector("[data-id=notDone]");
 const left = document.querySelector("[data-id=left]");
 const wish = document.querySelector(".greeting");
+const greetName = document.querySelector(".greetName");
+
 
 
 
@@ -75,7 +77,6 @@ function addToDo(e) {
   todoValue.value = "";
   todoDisplay(toDoArray);
   leftCount();
-
 }
 
 function todoDelete(event){
