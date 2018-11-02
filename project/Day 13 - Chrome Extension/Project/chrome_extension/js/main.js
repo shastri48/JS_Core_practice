@@ -6,6 +6,7 @@ var now;
 var second;
 var minute;
 var hour;
+
 function setDate() {
   now = new Date();
   second = now.getSeconds();
@@ -14,27 +15,21 @@ function setDate() {
   h.innerText = `${hour}:`;
   min.innerText = `${minute}`;
   if(hour < 12) {
-    greeting = "Good Morning";
+    greeting = `Good Morning <span class="greetName"></span>`;
   }
   if(hour > 12 && hour < 17) {
-    greeting = "Good Afternoon";
+    greeting = `Good Afternoon <span class="greetName"></span>`;
   }
   if(hour > 17 && hour < 20) {
-    greeting = "Good Evening";
+    greeting = `Good Evening <span class="greetName"></span>`;
   }
   if(hour > 20) {
-    greeting = "Good Night";
+    greeting = `Good Night <span class="greetName"></span>`;
   }
-  wish.innerText = greeting;
+  wish.innerHTML = greeting;
 
 }
 setInterval(setDate, 1000);
-
-
-
-
-
-
 
 
 const todoText = document.querySelector("#todo-form");
@@ -111,9 +106,11 @@ function doneData() {
   })
   todoDisplay(done);
 }
+
 function allData() {
   todoDisplay(toDoArray);
 }
+
 var notDone;
 function notDoneData() {
   notDone = toDoArray.filter(v => {
@@ -124,6 +121,7 @@ function notDoneData() {
   left.textContent = notDone.length;
   todoDisplay(notDone);
 }
+
 function leftCount() {
   notDone = toDoArray.filter(v => {
     if(!v.done){
@@ -143,6 +141,7 @@ function todoEdit(event) {
   todoDisplay(toDoArray);
   }
 }
+
 function saveEdited(e) {
   const editText = document.querySelector("[class=editText]");
   // console.log(e.target)
