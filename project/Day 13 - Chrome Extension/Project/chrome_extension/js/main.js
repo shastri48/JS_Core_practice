@@ -27,9 +27,26 @@ function setDate() {
     greeting = `Good Night <span class="greetName"></span>`;
   }
   wish.innerHTML = greeting;
-
+  displayName(); 
 }
 setInterval(setDate, 1000);
+
+var greetNameText = JSON.parse(localStorage.getItem("name")) || "";
+
+function displayName() {
+  if(!greetNameText){
+    addName();
+  } else {
+    name.innerHTML = greetNameText;
+  }
+}
+
+function addName(e) {
+  if(e.keyCode == 13){
+    name.innerHTML = nameText.value;
+    localStorage.setItem("name", JSON.stringify(nameText.value))
+  }
+}
 
 
 const todoText = document.querySelector("#todo-form");
@@ -42,6 +59,8 @@ const notDoneAll = document.querySelector("[data-id=notDone]");
 const left = document.querySelector("[data-id=left]");
 const wish = document.querySelector(".greeting");
 const greetName = document.querySelector(".greetName");
+const name  = document.querySelector(".name");
+const nameText  = document.querySelector(".nameText");
 
 
 
@@ -69,7 +88,11 @@ function addToDo(e) {
   if(!todoValue.value) return;
   todoData.name = todoValue.value; 
   toDoArray.push(todoData);
-  todoValue.value = "";
+  todoValue.value = "";if(!greetNameText){
+    addName();
+  } else {
+    name.innerHTML = greetNameText;
+  }
   todoDisplay(toDoArray);
   leftCount();
 }
@@ -163,3 +186,4 @@ doneAll.addEventListener("click", doneData);
 showAll.addEventListener("click", allData);
 notDoneAll.addEventListener("click", notDoneData);
 left.addEventListener("click", leftCount);
+nameText.addEventListener("keydown", addName);
