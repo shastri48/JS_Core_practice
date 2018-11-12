@@ -7,6 +7,7 @@ function addWish() {
   // namePrint.textContent = nameText.value;
   h2.innerText = nameText.value;
   namePrint.prepend(h2);
+  nameText.value = "";
 }
 function windowWish(e) {
   if(e.keyCode == 13){

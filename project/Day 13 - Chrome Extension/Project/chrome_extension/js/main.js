@@ -17,13 +17,13 @@ function setDate() {
   if(hour < 12) {
     greeting = `Good Morning <span class="greetName"></span>`;
   }
-  if(hour > 12 && hour < 17) {
+  if(hour >= 12 && hour < 17) {
     greeting = `Good Afternoon <span class="greetName"></span>`;
   }
-  if(hour > 17 && hour < 20) {
+  if(hour >= 17 && hour < 20) {
     greeting = `Good Evening <span class="greetName"></span>`;
   }
-  if(hour > 20) {
+  if(hour >= 20) {
     greeting = `Good Night <span class="greetName"></span>`;
   }
   wish.innerHTML = greeting;
