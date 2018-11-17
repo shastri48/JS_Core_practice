@@ -76,19 +76,23 @@ function Person(fn, ln) {
 		console.log(`Name: ${this.first_name} ${this.last_name}`);
 	}
 }
+// Name: first_name last_name
+
 
 let person = new Person("John", "Reed");
 person.displayName();  // Output
+// John Reed
 let person2 = new Person("Paul", "Adams");
 person2.displayName();  // Output
+// Paul Adams
 
 
 
 //This refers to the invoker Object
 function foo () {
 	'use strict';
-	console.log("Simple function call")
-	console.log(this === window); 
+	console.log("Simple function call")  //Simple function call
+	console.log(this === window);   //false
 }
 
 let user = {
@@ -99,10 +103,10 @@ let user = {
 	}
 }
 
-user.foo()  // Output
+user.foo()  // Output  //Simple functon call and false
 let fun1 = user.foo1;
-fun1() // Output ??
-user.foo1()  // Output ??
+fun1() // Output ?? //true
+user.foo1()  // Output ??  //false
 
 
 //this will call apply and bind
@@ -114,7 +118,7 @@ var module = {
   getX: function() { return this.x; }
 };
 
-module.getX(); // Output ??
+module.getX(); // Output ??       //81
 
 var retrieveX = module.getX;
 retrieveX(); //Output ??
@@ -141,3 +145,4 @@ let person2 = new Person("Paul", "Adams");
 person2.displayName(); // Output
 
 person.displayName.call(person2); // Output ??
+// Name: Paul Adams
