@@ -24,6 +24,12 @@ function Cat (name, tiredness, hunger, lonliness) {
 }
 
 
+class Cat {
+  constructor(){
+    
+  }
+}
+
 
 // 2nd
 // An object-oriented book-list!
