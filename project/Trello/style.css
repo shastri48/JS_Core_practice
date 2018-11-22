@@ -1,0 +1,12 @@
+.listItem, .listCard {
+  display: inline-block;
+  /* width: 250px; */
+  vertical-align: top;
+}
+span{
+  display: inline-block;
+  width: 300px;
+}
+.cardDataItem {
+  display: block;
+}
