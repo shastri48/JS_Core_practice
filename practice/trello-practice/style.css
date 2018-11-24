@@ -1,0 +1,25 @@
+.lists {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.list {
+  padding: 10px 10px;
+  display: inline-block;
+  text-align: center;
+  background: gray;
+  min-width: 300px;
+}
+p{
+  box-sizing: border-box;
+  padding: 10px 10px;
+  display: inline-block;
+  width: 80%;
+}
+.card:hover {
+  background: rgb(173, 173, 173);
+}
+.deleteCard{
+  width: 18%;
+  /* float: right; */
+}

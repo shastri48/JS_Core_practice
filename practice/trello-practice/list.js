@@ -3,7 +3,10 @@ class List {
     this.board = board;
     this.title = title;
     this.index = index;
-
+    let cardId = 0;
+    this.nextId = function(){
+      return cardId++;
+    }
     // create node
     this.node = createNode("div");
     this.node.className = "list";
@@ -18,14 +21,42 @@ class List {
     this.cardNode.className = "cards";
 
     if(!dummyList){
-      this.cards = [new Card(this, "Add new Card")]
+      this.cards = [new Card(this, "Add new Card", true)]
       this.cardForm = cardForm();
       this.cards[this.cards.length - 1].node.appendChild(this.cardForm);
       this.cards.forEach(card => {
         this.cardNode.appendChild(card.node);
       });
+      this.cardNode.addEventListener("click", this.cardDelete.bind(this));
+      this.cardNode.addEventListener("click", this.cardEdit.bind(this));
+
+      
       this.node.appendChild(this.cardNode);
       this.cards[this.cards.length - 1].node.addEventListener("click", () => addCard(this));
+    }
+  }
+  cardDelete(e) {
+    if(e.target.parentElement.dataset.id > 0 && e.target.classList.contains("deleteCard"))
+    var data = e.target.parentElement;
+    e.target.parentElement.parentElement.removeChild(data);
+  }
+  cardEdit(e){
+    e.preventDefault();
+    if(e.target.classList.contains("cardItem") && e.target.parentElement.dataset.id != 0){
+      var inputEdit = createNode("input");
+      inputEdit.setAttribute("type", "text");
+      inputEdit.setAttribute("id", "editId");
+      var store = e.target.textContent;
+      e.target.innerHTML = `<input type="text" class = "editId" value = ${store}>`;
+      var editSelect = document.querySelector(".editId")
+     
+      function replaceValue(event){
+        if(event.keyCode == 13){
+          e.target.textContent = editSelect.value;
+          console.log(editSelect.value);
+        }
+      }
+      editSelect.addEventListener("keydown", replaceValue);
     }
   }
 }
