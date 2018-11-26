@@ -32,13 +32,15 @@ class List {
 
       
       this.node.appendChild(this.cardNode);
-      this.cards[this.cards.length - 1].node.addEventListener("click", () => addCard(this));
+      this.cards[this.cards.length - 1].titleNode.addEventListener("click", () => addCard(this));
     }
   }
   cardDelete(e) {
-    if(e.target.parentElement.dataset.id > 0 && e.target.classList.contains("deleteCard"))
-    var data = e.target.parentElement;
-    e.target.parentElement.parentElement.removeChild(data);
+    if(e.target.parentElement.dataset.id > 0 && e.target.classList.contains("deleteCard")){
+      var data = e.target.parentElement;
+      console.log(data)
+      e.target.parentElement.parentElement.removeChild(data);
+    } else return;
   }
   cardEdit(e){
     e.preventDefault();
@@ -46,8 +48,10 @@ class List {
       var inputEdit = createNode("input");
       inputEdit.setAttribute("type", "text");
       inputEdit.setAttribute("id", "editId");
+      console.log(e.target)
       var store = e.target.textContent;
-      e.target.innerHTML = `<input type="text" class = "editId" value = ${store}>`;
+      console.log(store)
+      e.target.innerHTML = `<input type="text" class ="editId" value="${store}">`;
       var editSelect = document.querySelector(".editId")
      
       function replaceValue(event){

@@ -25,3 +25,7 @@ function cardForm(){
   cardForm.style.display = 'none';
   return cardForm;
 }
+
+function hide(list){
+  list.cardForm.style.display = "none";
+}
