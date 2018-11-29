@@ -87,7 +87,7 @@ function addToDo(e) {
   }
   if(!todoValue.value) return;
   todoData.name = todoValue.value; 
-  toDoArray.push(todoData);
+  toDoArray.unshift(todoData);
   todoValue.value = "";if(!greetNameText){
     addName();
   } else {

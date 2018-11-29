@@ -5,6 +5,24 @@ canvas.height = window.innerHeight;
 var c = canvas.getContext("2d");
 
 
+
+c.arc(200, 200, 30, 0, Math.PI * 2, false);
+c.strokeStyle = "blue";
+c.stroke();
+
+function animate(){
+  c.clearRect(0,0,innerWidth,innerHeight);
+  requestAnimationFrame(animate);
+  for(i = 0; i < 200; i++){
+    c.arc(200+i, 200+i, 30, 0, Math.PI * 2, false);
+    c.strokeStyle = "blue";
+    c.stroke();
+  }
+}
+animate(); 
+
+
+
 // // c.fillStyle = "green";
 // // c.fillRect(100,100,100,100);
 // // c.fillStyle = "skyblue";
@@ -53,70 +71,86 @@ var c = canvas.getContext("2d");
   //   this.radius = radius;
   // }
 
-var mouse = {
-  x: undefined,
-  y: undefined
-}
-
-function Circle(x, y, dx, dy, radius) {
-    this.x = x;
-    this.y = y;
-    this.dx = dx;
-    this.dy = dy;
-    this.radius = radius;
-
-  this.draw = function(){
-    c.beginPath();
-    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    c.strokeStyle = `rgb(${this.x},${this.y}, ${this.x})`;
-    c.stroke();
-    c.fillStyle = `rgb(${this.x},${this.y}, 46)`; 
-    c.fill();
-  }
-
-  this.update = function(){
-    if(this.y+this.radius > innerHeight || this.y-this.radius < 0){
-      this.dy = -this.dy;
-    }
-    if(this.x+this.radius > innerWidth || this.x-this.radius < 0){
-      this.dx = -this.dx;
-    }
-    this.y = this.y + this.dy;
-    this.x = this.x + this.dx;
-
-    if(mouse.x - this.x > 50){
-      this.radius += 1;
-    }
-    this.draw();
-  }
-}
-
-var circleArray = [];
-for(i = 0;i<100; i++){
-  var x = Math.random() * window.innerWidth;
-  var y = Math.random() * window.innerHeight;
-  var dx = 4;
-  var dy = 4;
-
-  circleArray.push(new Circle(x,y,dx,dy,30))
-}
+// var mouse = {
+//   x: undefined,
+//   y: undefined
+// }
+// colorArray = [
+//   "red", "green", "yellow", "blue", "pink"
+// ]
 
 
+// function Circle(x, y, dx, dy, radius) {
+//     this.x = x;
+//     this.y = y;
+//     this.dx = dx;
+//     this.dy = dy;
+//     this.radius = radius;
+//     this.color = colorArray[Math.floor(Math.random()*colorArray.length)];
 
-function animate(){
-  c.clearRect(0,0,innerWidth,innerHeight);
-  requestAnimationFrame(animate);
-  for(i = 0; i < circleArray.length; i++){
-    circleArray[i].update();
-  }
-}
-animate(); 
+//   this.draw = function(){
+//     c.beginPath();
+//     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+//     c.strokeStyle = `rgb(${this.x},${this.y}, ${this.x})`;
+//     c.stroke();
+//     // c.fillStyle = this.color; 
+//     // c.fill();
+//   }
 
-window.addEventListener("mousemove", (event) => {
-  console.log("mouesemove");
-  mouse.x = event.x;
-  mouse.y = event.y;
-})
+//   this.update = function(){
+//     if(this.y+this.radius > innerHeight || this.y-this.radius < 0){
+//       this.dy = -this.dy;
+//     }
+//     if(this.x+this.radius > innerWidth || this.x-this.radius < 0){
+//       this.dx = -this.dx;
+//     }
+//     this.y = this.y + this.dy;
+//     this.x = this.x + this.dx;
+
+//     if(mouse.x - this.x < 50 && mouse.x - this.x > -50){
+//       if(this.radius < 40){
+//         this.radius += 1;
+//         c.fillStyle = this.color;
+//         c.fill();
+//       }
+//     } else if(this.radius > 5){this.radius -= 1}
+//     if(mouse.y - this.y < 50 && mouse.y - this.y > -50){
+//       if(this.radius < 40){
+//         this.radius += 1;
+//         c.fillStyle = this.color;
+//         c.fill();
+//       }
+//     } else if(this.radius > 5){this.radius -= 1}
+
+//     this.draw();
+//   }
+// }
+
+// var circleArray = [];
+// for(i = 0;i<1500; i++){
+//   var x = Math.random() * window.innerWidth;
+//   var y = Math.random() * window.innerHeight;
+//   var dx = 2;
+//   var dy = 2;
+// var radius = Math.random() * 3 + 1;
+//   circleArray.push(new Circle(x,y,dx,dy,radius))
+// }
+
+
+
+// function animate(){
+//   c.clearRect(0,0,innerWidth,innerHeight);
+//   requestAnimationFrame(animate);
+//   for(i = 0; i < circleArray.length; i++){
+//     circleArray[i].update();
+//   }
+// }
+// animate(); 
+
+// window.addEventListener("mousemove", (event) => {
+//   mouse.x = event.x;
+//   mouse.y = event.y;
+// })
 
 // // var x = 0;
 // // var dx = 4;
@@ -135,6 +169,7 @@ window.addEventListener("mousemove", (event) => {
 //   // }
 //   // y = y + dy;
 //   // x = x + dx;
+
 
 
 // // canvas.addEventListener("click", cancelAnimationFrame(animate));
