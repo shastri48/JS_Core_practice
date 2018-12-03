@@ -1,0 +1,42 @@
+@import 'color.scss';
+
+
+header{
+  h1{
+    padding: 10px;
+    text-align: center;
+    font-size: 5rem;
+    background: $primary-color;
+    color: $font-color;
+  }
+}
+.location__wrapper{
+  margin: 20px 0;
+  text-align: center;
+  #location{
+    width:400px;
+    height: 50px;
+    font-size: 2rem;
+    border: none;
+    border: 3px solid blue;
+    background: rgb(43, 13, 179);
+    border-radius: 25px;
+    color:white;
+    &:hover{
+      background: rgb(36, 187, 214);
+    }
+  }
+}
+.location__details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .latitude{
+    font-size: 40px;
+    text-align: right;
+    padding: 5px 10px; 
+  }
+  .longitude {
+    font-size: 40px;
+    padding: 5px 10px; 
+  }
+}

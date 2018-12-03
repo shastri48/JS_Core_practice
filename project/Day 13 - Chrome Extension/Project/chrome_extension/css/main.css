@@ -1,5 +1,5 @@
 .container{
-  background: url("../img/chrome.JPG");  
+  /* background: url("../img/chrome.JPG");   */
   min-height:100%;
   background:url(../img/chrome.jpeg);
   background-size:cover;
@@ -26,7 +26,7 @@
   color: rgb(224, 221, 221);
 }
 .greeting, .name {
-  font-size: 40px;
+  font-size: 50px;
   color: rgb(224, 221, 221);
   display: inline-block;
   margin-left: 20px;
@@ -41,7 +41,7 @@
 .todo__section {
 }
 p, span{
-  font-size: 40px;
+  font-size: 30px;
   color:rgb(224, 221, 221);
 }
 span {

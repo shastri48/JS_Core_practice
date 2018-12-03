@@ -12,8 +12,12 @@ function setDate() {
   second = now.getSeconds();
   minute = now.getMinutes();
   hour = now.getHours();
-  h.innerText = `${hour}:`;
-  min.innerText = `${minute}`;
+  if(hour < 10){
+    h.innerText = `0${hour}:`;
+  } else h.innerText = `${hour}:`;
+  if(minute < 10){
+    min.innerText = `0${minute}`;
+  } else min.innerText = `${minute}`;
   if(hour < 12) {
     greeting = `Good Morning <span class="greetName"></span>`;
   }
@@ -187,3 +191,20 @@ showAll.addEventListener("click", allData);
 notDoneAll.addEventListener("click", notDoneData);
 left.addEventListener("click", leftCount);
 nameText.addEventListener("keydown", addName);
+
+
+
+
+var store;
+function changeDesktop(event){
+  if(event.keyCode == 32){
+    return fetch('https://api.unsplash.com/photos/random/?client_id=f34cd40ebc2d4829815c81f4152108ebcb928b5572a40d83df8db3c47637f5eb').then(d=>d.json()).then(d=>{store = d}).then(changeDesktopBackground);
+  }
+}
+var container = document.querySelector(".container");
+function changeDesktopBackground(){
+  container.style.backgroundImage = `url(${store.urls.regular})`;
+}
+
+
+document.body.addEventListener("keydown",changeDesktop);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>geoLocation</title>
+<body>
+  <header>
+    <h1>Location Finder</h1>
+  </header>
+  <div class="location__wrapper">
+    <button id="location">Get Your Location</button>
+  </div>
+  <div class="location__details">
+    <h3 class="latitude"></h3>
+    <h3 class="longitude"></h3>
+  </div>
+  <div id="map"></div>
+  <script src="./assets/js/main.js">
+  var map;
+  var mapDiv = document.querySelector("#map");
+
+  function initMap() {
+    map = new google.maps.Map(mapDiv, {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+    });
+  }
+  </script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCJRLHn3Ow3kRx4GOS2hVcpJ44kEbilrY&callback=initMap" type="text/javascript"></script> -->
+</body>
+</html>
