@@ -1,0 +1,48 @@
+
+.background {
+  background: rgb(52, 166, 251);
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+/* // .background of table data */
+.background td {
+  padding: 0;
+}
+/* // color of lava */
+.lava {
+  background: rgb(255, 100, 100);
+}
+/* // color of wall */
+.wall {
+  background: white;
+}
+/* //actors properties */
+.actor {
+  position: absolute;
+}
+.coin {
+  background: rgb(241, 229, 89);
+}
+.player {
+  background: rgb(64, 64, 64);
+}
+
+
+/* // Game result */
+.lost .player{
+  background: rgb(160, 64, 64);
+}
+
+.won .player {
+  box-shadow: -4px -7px 8px white, 4px -7px 8px white;
+}
+
+/* // game overflow // game out of the viewwidth */
+.game {
+  overflow: hidden;
+  max-width: 600px;
+  max-height: 450px;
+  position: relative;
+}
+

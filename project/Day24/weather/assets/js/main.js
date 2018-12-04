@@ -32,7 +32,7 @@ function showReport(){
   let placeName = `Your Place : ${storeReport.name}  , ${storeReport.sys.country}`;
   create("h4", placeName,"place", displayReport);
 
-  let temp = `Temperature : ${(tempC).toFixed(2)} (${storeReport.weather[0].description}) &#8451;`;
+  let temp = `Temperature : ${(tempC).toFixed(2)} (${storeReport.weather[0].description})`;
   create("div", temp, "temperature", displayReport);
 
   let latitude = `Latitude : ${storeReport.coord.lat}`;
@@ -74,7 +74,7 @@ function showSearch(storeSearch){
     create("h4", temp, "temperature", displayCity);
   }
 
-  var data = fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchPlace.value}&APPID=555d08b7ce7f613747408910cfce3af1`).then(d=>d.json()).then(d=> {storeFiveDay = d; showFiveDay(storeFiveDay)}).catch(alert("Connect to Internet"));
+  var data = fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchPlace.value}&APPID=555d08b7ce7f613747408910cfce3af1`).then(d=>d.json()).then(d=> {storeFiveDay = d; showFiveDay(storeFiveDay)});
 }
 
 function showFiveDay(storeFiveDay){
