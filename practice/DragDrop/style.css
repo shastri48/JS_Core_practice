@@ -1,0 +1,23 @@
+.fill {
+  background: url("self.png");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+.empty {
+  display: inline-block;
+  background: gray;
+  width: 160px;
+  height: 160px;
+  margin: 10px;
+}
+.invisible {
+  display: none;
+}
+.hovered {
+  border: 5px dashed red;
+}
