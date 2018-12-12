@@ -5,6 +5,7 @@ fill.addEventListener("dragstart", dragStart);
 fill.addEventListener("dragend", dragEnd);
 
 function dragStart() {
+  // this.className += "invisible"
   setTimeout(()=> (this.className += "invisible"), 0);
 }
 function dragEnd(){
